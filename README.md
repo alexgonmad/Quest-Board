@@ -70,7 +70,7 @@ flutter run
 # 🪧 Quest Board
 
 **Quest Board** es una aplicación multiplataforma diseñada para gestionar tareas de cualquier tamaño.  
-Piénsalo como tu **tablero personal de misiones** – desde pequeños tareas hasta grandes proyectos.  
+Piénsalo como tu **tablero personal de misiones** – desde pequeñas tareas hasta grandes proyectos.  
 La filosofía de diseño está inspirada en la serie **Pokémon Mundo Misterioso (PMM)**.
 
 ## 🎮 Tipos de Quest 
