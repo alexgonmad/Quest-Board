@@ -51,3 +51,7 @@ Update frequency: Low. Update only when architecture or foundational technical c
   - Formatter: `dart format` (mandatory).
   - Commits: Conventional Commits (e.g., `feat: add recurring quests`).
   - CI: analyze + test on every PR.
+  - All code comments must be in English.
+  - Commit messages in English (Conventional Commits).
+  - File/folder names in English (lowercase).
+
