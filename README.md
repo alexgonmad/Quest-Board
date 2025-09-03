@@ -1,5 +1,5 @@
 ---
-🇺🇸 / 🇬🇧
+**English**
 ---
 # 🪧 Quest Board
 
@@ -65,7 +65,7 @@ flutter run
 ```
 
 ---
-🇪🇸
+**Español**
 ---
 # 🪧 Quest Board
 
