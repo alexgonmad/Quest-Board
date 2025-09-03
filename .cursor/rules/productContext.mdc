@@ -1,0 +1,17 @@
+---
+description: Defines Quest Board's product vision, tone, and design philosophy
+globs:
+alwaysApply: true
+---
+<!--
+File: productContext.mdc
+Purpose: Defines the vision, tone, and product philosophy. Helps the assistant keep the product identity consistent.
+Update frequency: Rarely. Update only if product positioning or design philosophy changes.
+-->
+
+# Product Context
+- Visual style: inspired by **Pokémon Mystery Dungeon**, colorful and playful.
+- Tone: motivating and fun overall, with seriousness only when necessary.
+- Differentiator: the unique design philosophy that reimagines tasks as quests, making the experience curious and engaging.
+- Inspirations:
+  - Pokémon Mystery Dungeon (design and atmosphere).

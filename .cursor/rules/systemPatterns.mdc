@@ -1,0 +1,53 @@
+---
+description: Architecture and coding patterns for Quest Board (BLoC, GoRouter, Isar, M3)
+globs:
+alwaysApply: true
+---
+<!--
+File: systemPatterns.mdc
+Purpose: Defines the core architecture and coding patterns to keep the codebase consistent and scalable.
+Update frequency: Low. Update only when architecture or foundational technical choices change.
+-->
+
+# System Patterns
+- Architecture
+  - Clean + feature-first (group by features: auth, tasks, settings; each with data/logic/ui layers).
+  - Clear boundaries between UI, business logic, and data sources.
+
+- State management
+  - BLoC (Cubit/BLoC) for predictable state and testability.
+
+- Navigation
+  - GoRouter (typed routes, guards as needed). Start simple, grow with features.
+
+- Data modeling
+  - Start flexible: simple, pragmatic models (mutable allowed in MVP).
+  - Plan Phase 2: migrate to immutable models (Freezed) + generated JSON when the schema stabilizes.
+
+- Persistence (MVP)
+  - Isar for local storage (tasks, subtasks, metadata).
+  - Simple repository layer; later add migrations/versioning if needed.
+
+- Networking / API (future-friendly)
+  - Dio for HTTP (timeouts + basic logging).
+  - Interceptors later (auth/retry) if/when backend arrives.
+
+- Theming & UI
+  - Material 3 with light/dark themes.
+  - Consistent spacing/radius; keep PMD-inspired visual language.
+
+- i18n & a11y
+  - Languages: English (default) + Spanish.
+  - Accessibility from day one: touch sizes ≥ 48dp, clear contrast, semantic labels.
+
+- Testing
+  - Unit tests required for business logic and utils.
+  - Minimum coverage: start at ≥60% (raise threshold as the codebase matures).
+  - Widget tests for critical UI (task list, creation flow).
+
+- Conventions & quality gates
+  - Flutter official conventions (naming, folders under `lib/src/features/...`).
+  - Lints: `flutter_lints` (no warnings on CI).
+  - Formatter: `dart format` (mandatory).
+  - Commits: Conventional Commits (e.g., `feat: add recurring quests`).
+  - CI: analyze + test on every PR.

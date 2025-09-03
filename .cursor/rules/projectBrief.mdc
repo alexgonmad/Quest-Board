@@ -1,0 +1,25 @@
+---
+description: High-level overview of Quest Board and MVP scope
+globs:
+alwaysApply: true
+---
+<!--
+File: projectBrief.mdc
+Purpose: A short overview of the project. Explains what the app is, the goal, and the scope of the MVP.
+Update frequency: Rarely. Only update if the overall project scope changes.
+-->
+
+# Project Brief
+- Project: Quest Board
+- Goal: A simple task list app with a design philosophy inspired by the **Pokémon Mystery Dungeon** series.
+- MVP Scope:
+  - Support creation of multiple quest types:
+    - By time/recurrence (single, recurring daily/weekly/monthly/annual/custom, timed, expiring, duration, free).
+    - By priority/urgency (5-star scale: emergency → chill).
+    - By structure (quick, multi-objective, sequential).
+    - By category (work, personal, home, health, finance, learning, custom).
+  - Ability to create, complete, and delete tasks (“quests”).
+  - Local storage for persistence.
+- Target Audience:
+  - Organized people in general.
+  - Mainly younger users (12 years old as a minimum).

@@ -1,0 +1,16 @@
+---
+description: Current focus of Quest Board development
+globs:
+alwaysApply: true
+---
+<!--
+File: activeContext.mdc
+Purpose: Describes what part of the project is currently active. Guides the assistant on where to focus efforts.
+Update frequency: High. Update whenever priorities or current tasks change.
+-->
+
+# Active Context
+- Current phase: defining the overall project structure.
+- Active screens: none created yet.
+- Key components: to be defined.
+- Immediate priority: build a project skeleton to serve as a foundation for development.

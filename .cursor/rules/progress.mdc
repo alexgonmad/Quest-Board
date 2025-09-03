@@ -1,0 +1,23 @@
+---
+description: Tracks completed, in-progress, and pending tasks for Quest Board
+globs:
+alwaysApply: true
+---
+<!--
+File: progress.mdc
+Purpose: Tracks what has been completed, what is in progress, and what is pending. Keeps project continuity clear and helps the assistant focus on the right stage.
+Update frequency: High. Update after every development milestone.
+-->
+
+# Progress
+- Completed:
+  - Repository created.
+  - README created.
+  - Flutter base project initialized.
+  - Memory Bank set up in `.cursor/rules/`.
+
+- In Progress:
+  - Defining the overall project structure.
+
+- Pending:
+  - Set up basic tools (e.g., HTTP client).

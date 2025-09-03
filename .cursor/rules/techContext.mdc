@@ -1,0 +1,42 @@
+---
+description: Technologies, libraries, and tools used by Quest Board
+globs:
+alwaysApply: true
+---
+<!--
+File: techContext.mdc
+Purpose: Quick technical reference of the chosen stack and tools. Helps keep decisions visible and consistent.
+Update frequency: Low. Update when adding/removing key tools, or pinning versions.
+-->
+
+# Tech Context
+- Platform & Language
+  - Flutter (stable channel), Dart (latest stable).
+
+- Core Packages
+  - State: BLoC (bloc/cubit).
+  - Navigation: GoRouter.
+  - Storage: Isar (local DB).
+  - HTTP: Dio (basic timeouts/logging; add interceptors later).
+  - (Phase 2) Codegen/immutability: Freezed + json_serializable when models stabilize.
+
+- Utilities & Dev Experience
+  - Lints/format: `flutter_lints`, `dart format`.
+  - Env/config: `--dart-define` (per flavor).
+  - Logging: simple structured logs (upgrade as needed).
+
+- Testing
+  - Unit tests (business logic, utils).
+  - Widget tests for critical flows (task list, creation).
+  - Coverage threshold: start ≥60% (raise over time).
+
+- CI/CD
+  - GitHub Actions: analyze + test on every PR; build pipelines later.
+
+- Design & Assets
+  - Design source: Figma.
+  - Theming: Material 3 (light/dark), PMD-inspired visuals.
+
+- Backend / Sync (TBD)
+  - Local-first MVP.
+  - Future options: Firebase or custom Node.js microservices (to be evaluated).
