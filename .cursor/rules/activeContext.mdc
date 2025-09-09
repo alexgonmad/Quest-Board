@@ -10,7 +10,7 @@ Update frequency: High. Update whenever priorities or current tasks change.
 -->
 
 # Active Context
-- Current phase: defining the overall project structure.
-- Active screens: none created yet.
-- Key components: to be defined.
-- Immediate priority: build a project skeleton to serve as a foundation for development.
+- Current phase: starting the screen
+- Active screens: splash_screen.dart
+- Key components: to be created
+- Immediate priority: improve animation

@@ -7,6 +7,9 @@
 .buildlog/
 .history
 
+# Editor settings (local only)
+.vscode/
+
 
 
 # Flutter repo-specific
