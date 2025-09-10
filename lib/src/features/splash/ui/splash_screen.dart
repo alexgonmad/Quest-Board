@@ -32,24 +32,44 @@ class _SplashScreenState extends State<SplashScreen>
     // Total duration 2s to keep the animation visible long enough.
     _controller = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2000),
+      duration: const Duration(milliseconds: 1800),
     );
 
-    // Start below the screen, overshoot slightly above center, then settle.
+    // Start below the screen, overshoot significantly above center, then settle.
     _slideAnimation = TweenSequence<Offset>([
       TweenSequenceItem(
         tween: Tween<Offset>(
           begin: const Offset(0, 1.2),
-          end: const Offset(0, -0.06), // a little above the final spot
+          end: const Offset(0, -0.5),
         ).chain(CurveTween(curve: Curves.easeOutCubic)),
-        weight: 60,
+        weight: 62,
       ),
+
+      // Returns to center with some inertia
       TweenSequenceItem(
         tween: Tween<Offset>(
-          begin: const Offset(0, -0.06),
+          begin: const Offset(0, -0.5),
+          end: const Offset(0, 0.12),
+        ).chain(CurveTween(curve: Curves.easeInQuad)),
+        weight: 20,
+      ),
+
+      // Small bounce up (just past center)
+      TweenSequenceItem(
+        tween: Tween<Offset>(
+          begin: const Offset(0, 0.12),
+          end: const Offset(0, -0.04),
+        ).chain(CurveTween(curve: Curves.easeOutQuad)),
+        weight: 8,
+      ),
+
+      // Settle in center smoothly
+      TweenSequenceItem(
+        tween: Tween<Offset>(
+          begin: const Offset(0, -0.04),
           end: Offset.zero,
         ).chain(CurveTween(curve: Curves.easeOut)),
-        weight: 40,
+        weight: 10,
       ),
     ]).animate(_controller);
 
